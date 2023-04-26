@@ -13,13 +13,13 @@ Anything breaking these rules are an automatic; nope!
 
 ## Examples
 ### Logging vewwy fancy script status :3
-The script.
+#### The script (Super fancy!)
 ```bash
 #!/bin/bash
 #
 source unicorn.sh
 
-genrand_and_devise () {
+genrand_and_divise () {
 	num=$RANDOM
 
 	sleep 3
@@ -32,9 +32,9 @@ genrand_and_devise () {
 }
 
 ub_l1_info 'I am going to do something really cool now!'
-ub_l1_conf_await 'Checking if random number is devisable by two... '
+ub_l1_conf_await 'Checking if random number is divisable by two... '
 
-return=$(genrand_and_devise)
+return=$(genrand_and_divise)
 
 if [[ $return -eq 1 ]]; then
 	ub_l0_end 'Done'
@@ -43,11 +43,22 @@ else
 	ub_l2_err_replace 'Something has gone terribly wrong!'
 fi
 ```
-The output on run;
-![alt text](/docs/img/run.png)
 
-The output on success;
-![alt text](/docs/img/done.png)
+#### Output (WOW!)
+While it is still "processing".
+```bash
+-> I am going to do something really cool now!
+>> Checking if random number is divisable by two...
+```
 
-The output on fail;
-![alt text](/docs/img/error.png)
+When the random number is divisable by two.
+```bash
+-> I am going to do something really cool now!
+>> Checking if random number is divisable by two... Done
+```
+
+When the random number is not divisable by two.
+```bash
+-> I am going to do something really cool now!
+<!> Something has gone terribly wrong!
+```
