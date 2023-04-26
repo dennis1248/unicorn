@@ -40,7 +40,7 @@ if [[ $return -eq 1 ]]; then
 	ub_l0_end 'Done'
 else
 	ub_l0_end ''
-	ub_l2_err_replace 'Something has gone terribly wrong!'
+	ub_l2_warn_replace 'Something has gone terribly wrong!'
 fi
 ```
 
