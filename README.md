@@ -5,9 +5,9 @@ Unicorn is a collection of functions and variables one can use to make your Bash
 ## Project goals
 Unicorn is build upon three pillars of foundation;
 
-1. Thou shall aim to be as easy to use as possible
 1. Thou shall K.I.S.S.
-1. Thou shall not polute thy environment
+1. Thou shall aim to be as easy to use as possible
+1. Thou shall not pollute thy environment
 
 Anything breaking these rules are an automatic; nope!
 
