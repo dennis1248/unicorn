@@ -43,7 +43,7 @@ else
 	ub_l2_err_replace 'Something has gone terribly wrong!'
 fi
 ```
-The Output on run;
+The output on run;
 ![alt text](/docs/img/run.png)
 
 The output on success;
