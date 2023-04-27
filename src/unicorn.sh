@@ -49,7 +49,7 @@ ub_l1_err_await () {
 }
 
 ub_l1_err_replace () {
-	printf "\r[1A\e[K\e[31m#>\e[0m $*\n"
+	printf "\r\e[31m#>\e[0m $*\n"
 }
 
 ub_l2_err () {
@@ -61,7 +61,7 @@ ub_l2_err_await () {
 }
 
 ub_l2_err_replace () {
-	printf "\r[1A\e[K\e[31m<#>\e[0m $*\n"
+	printf "\r\e[31m<#>\e[0m $*\n"
 }
 
 ## Warings
@@ -74,7 +74,7 @@ ub_l1_warn_await () {
 }
 
 ub_l1_warn_replace () {
-	printf "\r[1A\e[K\e[1;33m!>\e[0m $*\n"
+	printf "\r\e[1;33m!>\e[0m $*\n"
 }
 
 ub_l2_warn () {
@@ -86,7 +86,7 @@ ub_l2_warn_await () {
 }
 
 ub_l2_warn_replace () {
-	printf "\r[1A\e[K\e[1;33m<!>\e[0m $*\n"
+	printf "\r\e[1;33m<!>\e[0m $*\n"
 }
 
 ## Confirmations
@@ -99,7 +99,7 @@ ub_l1_conf_await () {
 }
 
 ub_l1_conf_replace () {
-	printf "\r[1A\e[K\e[33m>>\e[0m $*\n"
+	printf "\r\e[33m>>\e[0m $*\n"
 }
 
 ub_l2_conf () {
@@ -111,7 +111,7 @@ ub_l2_conf_await () {
 }
 
 ub_l2_conf_replace () {
-	printf "\r[1A\e[K\e[32m>>>\e[0m $*\n"
+	printf "\r\e[32m>>>\e[0m $*\n"
 }
 
 ## Generic logging
@@ -124,7 +124,7 @@ ub_l1_info_await () {
 }
 
 ub_l1_info_replace () {
-	printf "\r[1A\e[K\e[34m->\e[0m $*\n"
+	printf "\r\e[34m->\e[0m $*\n"
 }
 
 ub_l2_info () {
@@ -136,7 +136,7 @@ ub_l2_info_await () {
 }
 
 ub_l2_info_replace () {
-	printf "\r[1A\e[K\e[34m-->\e[0m $*\n"
+	printf "\r\e[34m-->\e[0m $*\n"
 }
 
 ## Plain text
