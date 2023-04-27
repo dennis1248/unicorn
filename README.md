@@ -41,7 +41,6 @@ return=$(genrand_and_divise)
 if [[ $return -eq 1 ]]; then
 	ub_l0_end 'Done'
 else
-	ub_l0_end ''
 	ub_l2_warn_replace 'Something has gone terribly wrong!'
 fi
 ```
@@ -88,7 +87,7 @@ Here is a list of available variants;
 | --- | --- |
 | _undefined_ | Functions for which no variant is defined will print a full line and insert a new line |
 | `_await` | Functions of the await variant will not insert a new line, instead awaiting a manual termination by another program or build-in |
-| `_replace` | Functions of the replace variant will replace the previous line and insert a new line, do not forget to terminate `_await` variants before replacing them |
+| `_replace` | Functions of the replace variant will perform a carriage return and overwrite the current line, useful for replacing an `_await` type |
 | `_end` | Functions of the end variant are exclusively found in level 0, they print a full line and insert a new line, usefull as a shortcut for terminating `_await` |
 
 #### Examples
@@ -117,7 +116,6 @@ ub_l2_info_await 'Done in a few moments... '
 sleep 10
 
 if [[ $? -eq 0 ]]; then
-    ub_l0_end ''
     ub_l2_err_replace 'I overslept!'
 else
     ub_l0_end 'Done'
