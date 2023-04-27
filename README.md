@@ -1,5 +1,4 @@
 # 🦄 Unicorn
-## What is Unicorn?!
 Unicorn is a collection of functions and variables one can use to make your Bash script output super-duper-pretty!
 
 ![preview](/docs/img/preview.png)
@@ -7,7 +6,7 @@ Unicorn is a collection of functions and variables one can use to make your Bash
 ## Project goals and vision
 Unicorn is build upon three pillars of foundation;
 
-1. Thou shall K.I.S.S.
+1. Thou shall K.I.S.S. (Keep It Simple Stupid)
 1. Thou shall aim to be as easy to use as possible
 1. Thou shall not pollute thy environment
 
@@ -33,35 +32,35 @@ genrand_and_divise () {
 	fi
 }
 
-ub_l1_info 'I am going to do something really cool now!'
-ub_l1_conf_await 'Checking if random number is divisable by two... '
+ub_l1_info 'This will error if the number is not divisible by two'
+ub_l1_conf_await 'Checking if random number is divisible by two... '
 
 return=$(genrand_and_divise)
 
 if [[ $return -eq 1 ]]; then
 	ub_l0_end 'Done'
 else
-	ub_l2_warn_replace 'Something has gone terribly wrong!'
+	ub_l2_warn_replace 'Error, the number is not divisible by two!'
 fi
 ```
 
 #### Output
 While it is still "processing".
 ```bash
--> I am going to do something really cool now!
->> Checking if random number is divisable by two...
+-> This will error of the number is not devisable by two
+>> Checking if random number is divisible by two...
 ```
 
-When the random number is divisable by two.
+When the random number is divisible by two.
 ```bash
--> I am going to do something really cool now!
->> Checking if random number is divisable by two... Done
+-> This will error of the number is not devisable by two
+>> Checking if random number is divisible by two... Done
 ```
 
-When the random number is not divisable by two.
+When the random number is not diviiable by two.
 ```bash
--> I am going to do something really cool now!
-<!> Something has gone terribly wrong!
+-> I am going to do something really cool now
+<!> Error, the number is not devisable by two!
 ```
 
 ## Usage
@@ -88,7 +87,7 @@ Here is a list of available variants;
 | _undefined_ | Functions for which no variant is defined will print a full line and insert a new line |
 | `_await` | Functions of the await variant will not insert a new line, instead awaiting a manual termination by another program or build-in |
 | `_replace` | Functions of the replace variant will perform a carriage return and overwrite the current line, useful for replacing an `_await` type |
-| `_end` | Functions of the end variant are exclusively found in level 0, they print a full line and insert a new line, usefull as a shortcut for terminating `_await` |
+| `_end` | Functions of the end variant are exclusively found in level 0, they print a full line and insert a new line, useful as a shortcut for terminating `_await` |
 
 #### Examples
 > **Note** The examples are all nicely formated using quotes, however you are not required to do so. Feel free to use `ub_l1_info Hello, World!` for this is also syntactically valid.
@@ -151,7 +150,7 @@ UB_COLOR_CYAN='\e[36m'
 UB_COLOR_GRAY='\e[37m'
 ```
 
-`ub_set_bgcolor` follows the same pattern
+`ub_set_bgcolor` follows the same pattern.
 
 ```
 UB_BGCOLOR_BLACK='\e[40m'
