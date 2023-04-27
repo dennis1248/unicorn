@@ -178,42 +178,42 @@ ub_l2_err_quit () {
 #
 # Reset text back to default, will also undo color and bgcolor
 ub_text_reset () {
-	printf '\033[0m'
+	printf '\e[0m'
 }
 
 # Make text bold
 ub_text_bold () {
-	printf '\033[1m'
+	printf '\e[1m'
 }
 
 # Make text dim
 ub_text_dim () {
-	printf '\033[2m'
+	printf '\e[2m'
 }
 
 # Make text italic
 ub_text_italic () {
-	printf '\033[3m'
+	printf '\e[3m'
 }
 
 # Make text underlined
 ub_text_underline () {
-	printf '\033[4m'
+	printf '\e[4m'
 }
 
 # Make text blink
 ub_text_blink () {
-	printf '\033[5m'
+	printf '\e[5m'
 }
 
 # Make text color inverted
 ub_text_invert () {
-	printf '\033[7m'
+	printf '\e[7m'
 }
 
 # Make text hidden
 ub_text_hidden () {
-	printf '\033[8m'
+	printf '\e[8m'
 }
 
 ### Common file manipulations ###
@@ -267,14 +267,14 @@ ub_run_touch () {
 #
 # Enable text styling variables
 ub_set_text () {
-	UB_TEXT_RESET='\033[0m'
-	UB_TEXT_BOLD='\033[1m'
-	UB_TEXT_DIM='\033[2m'
-	UB_TEXT_ITALIC='\033[3m'
-	UB_TEXT_UNDERLINE='\033[4m'
-	UB_TEXT_BLINK='\033[5m'
-	UB_TEXT_INVERT='\033[7m'
-	UB_TEXT_HIDDEN='\033[8m'
+	UB_TEXT_RESET='\e[0m'
+	UB_TEXT_BOLD='\e[1m'
+	UB_TEXT_DIM='\e[2m'
+	UB_TEXT_ITALIC='\e[3m'
+	UB_TEXT_UNDERLINE='\e[4m'
+	UB_TEXT_BLINK='\e[5m'
+	UB_TEXT_INVERT='\e[7m'
+	UB_TEXT_HIDDEN='\e[8m'
 
 	# This function will only be available after ub_set_text has be run
 	ub_unset_text () {
