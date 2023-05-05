@@ -47,20 +47,20 @@ fi
 #### Output
 While it is still "processing".
 ```bash
--> This will error of the number is not devisable by two
+-> This will error if the number is not devisable by two
 >> Checking if random number is divisible by two...
 ```
 
 When the random number is divisible by two.
 ```bash
--> This will error of the number is not devisable by two
+-> This will error if the number is not devisable by two
 >> Checking if random number is divisible by two... Done
 ```
 
-When the random number is not diviiable by two.
+When the random number is not divisible by two.
 ```bash
 -> I am going to do something really cool now
-<!> Error, the number is not devisable by two!
+<!> Error, the number is not devisible by two!
 ```
 
 ## Usage
