@@ -127,6 +127,12 @@ fi
 # <#> I overslept!
 ```
 
+```bash
+ub_run_mkdir 'testdir1' 'testdir2:777' 'testdir3:750'
+
+# This will create three directories, dir 2 and 3 have custom permissions defined after the `:` delimiter, dir 1 uses the default permissions
+```
+
 ### Actions
 There are a hand full of commonly performed actions available, such as checking if the user is root with `ub_quit_if_no_suid`.
 
