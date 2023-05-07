@@ -261,6 +261,24 @@ ub_run_touch () {
 	done
 }
 
+ub_run_cp () {
+	ub_l1_info 'Copying file...'
+
+	if [[ -e $2 ]]; then
+		ub_l2_warn "Skipping copy $1 to $2 for it already exists"
+	else
+		ub_l2_conf_await "Copying $1 to $2... "
+		cp $1 $2
+
+		if [[ ! $? -eq 0 ]]; then
+			ub_l2_err_replace "An error occured while trying to copy $1 to $2"
+		else
+			ub_l0_end 'Done'
+		fi
+	fi
+
+}
+
 ### Set useful environment variables ###
 #
 # Enable text styling variables
