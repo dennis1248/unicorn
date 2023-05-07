@@ -127,16 +127,20 @@ fi
 # <#> I overslept!
 ```
 
+### Actions
+There are a hand full of commonly performed actions available, such as checking if the user is root with `ub_quit_if_no_suid`.
+
+Actions all follow the `ub_quit` and `ub_warn` pattern.
+
+### Wrappers
+Wrappers are functions which prettify the output of commonly used programs. Wrappers always folow the `ub_run` pattern, some examples being `ub_run_mkdir` and `ub_run_touch`.
+
+Some wrappers may be extended with additional functionalty, for example the `ub_run_mkdir` and `ub_run_touch` functions accept either a filename or a filename and mode devided by a delimiter.
 ```bash
 ub_run_mkdir 'testdir1' 'testdir2:777' 'testdir3:750'
 
 # This will create three directories, dir 2 and 3 have custom permissions defined after the `:` delimiter, dir 1 uses the default permissions
 ```
-
-### Actions
-There are a hand full of commonly performed actions available, such as checking if the user is root with `ub_quit_if_no_suid`.
-
-Actions all follow the `ub_quit` and `ub_warn` pattern.
 
 ### Variables
 Variables are not loaded in by default to avoid poluting the environment, they have to be requested using a `ub_set` command.
