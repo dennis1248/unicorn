@@ -227,9 +227,9 @@ ub_run_mkdir () {
 		declare data=(${i//:/ })
 
 		if [[ -e ${data[0]} ]]; then
-			ub_l2_warn "Skipping $i for it already exists"
+			ub_l2_warn "Skipping ${data[0]} for it already exists"
 		else
-			ub_l2_conf_await "Creating $i... "
+			ub_l2_conf_await "Creating ${data[0]}... "
 
 			if [[ -n ${data[1]} ]]; then
 				mkdir -p ${data[0]} -m ${data[1]} 2> /dev/null
@@ -266,7 +266,7 @@ ub_run_touch () {
 			fi
 
 			if [[ ! $? -eq 0 ]]; then
-				ub_l2_err_replace "An error occured while trying to create $i"
+				ub_l2_err_replace "An error occured while trying to create ${data[0]}"
 			else
 				ub_l0_end 'Done'
 			fi
