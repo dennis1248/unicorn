@@ -135,7 +135,7 @@ Actions all follow the `ub_quit` and `ub_warn` pattern.
 ### Wrappers
 Wrappers are functions which prettify the output of commonly used programs. Wrappers always follow the `ub_run` pattern, some examples being `ub_run_mkdir` and `ub_run_touch`.
 
-Some wrappers may be extended with additional functionalty, for example the `ub_run_mkdir` and `ub_run_touch` functions accept either a filename or a filename and mode devided by a delimiter.
+Some wrappers may be extended with additional functionalty, for example the `ub_run_mkdir` and `ub_run_touch` functions accept either a filename or a filename and mode divided by a delimiter.
 ```bash
 ub_run_mkdir 'testdir1' 'testdir2:777' 'testdir3:750'
 
