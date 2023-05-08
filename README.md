@@ -71,7 +71,7 @@ Logs are divided in to levels;
 - Level 0 `l0` is exclusively used for making minor alterations to printed lines, it does not insert any additional characters.
 - Level 1 `l1` and level 2 `l2` are functionally identical, levels are used to visually show a relationship between parent and child elements. For example the starting character of `ub_l1_err` is a `#>` and for `ub_l2_err` it is a `<#>`.
 
-All log items follow the same naming convention, ub-_level_-_type_-_variant_, the plain type being a semi-exception for it is empty and not explicitely defined.
+All log items follow the same naming convention, ub-_level_-_type_-_variant_, the plain type being a semi-exception for it is empty and not explicitly defined.
 
 There are four types of logs; plain, info `info`, warning `warn` and error `err`.
 
@@ -90,7 +90,7 @@ Here is a list of available variants;
 | `_end` | Functions of the end variant are exclusively found in level 0, they print a full line and insert a new line, useful as a shortcut for terminating `_await` |
 
 #### Examples
-> **Note** The examples are all nicely formated using quotes, however you are not required to do so. Feel free to use `ub_l1_info Hello, World!` for this is also syntactically valid.
+> **Note** The examples are all nicely formatted using quotes, however you are not required to do so. Feel free to use `ub_l1_info Hello, World!` for this is also syntactically valid.
 ```bash
 ub_l1_info 'Hello, World!'
 
@@ -135,7 +135,7 @@ Actions all follow the `ub_quit` and `ub_warn` pattern.
 ### Wrappers
 Wrappers are functions which prettify the output of commonly used programs. Wrappers always follow the `ub_run` pattern, some examples being `ub_run_mkdir` and `ub_run_touch`.
 
-Some wrappers may be extended with additional functionalty, for example the `ub_run_mkdir` and `ub_run_touch` functions accept either a filename or a filename and mode divided by a delimiter.
+Some wrappers may be extended with additional functionality, for example the `ub_run_mkdir` and `ub_run_touch` functions accept either a filename or a filename and mode divided by a delimiter.
 ```bash
 ub_run_mkdir 'testdir1' 'testdir2:777' 'testdir3:750'
 
@@ -143,9 +143,9 @@ ub_run_mkdir 'testdir1' 'testdir2:777' 'testdir3:750'
 ```
 
 ### Variables
-Variables are not loaded in by default to avoid poluting the environment, they have to be requested using a `ub_set` command.
+Variables are not loaded in by default to avoid polluting the environment, they have to be requested using a `ub_set` command.
 
-For example `ub_set_color` to set the default bash text colors as enviroment variables.
+For example `ub_set_color` to set the default bash text colors as environment variables.
 
 These are the available colors for `ub_set_color`.
 
